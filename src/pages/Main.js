@@ -1,12 +1,9 @@
-
 import Row from "../components/Row";
 import API from "../utils/API";
 import React, { Component } from "react";
 import Search from "../components/Search";
 
-console.log(API)
-
-class Welcome extends Component {
+class Main extends Component {
     state = {
         people: [{
             picture: {
@@ -32,7 +29,7 @@ class Welcome extends Component {
 
     // get people for display and put them in array 
     componentDidMount() {
-        API.randomEmployees()
+        API.getRandomEmployees()
             .then(res => {
            
                 this.setState({
@@ -141,4 +138,4 @@ class Welcome extends Component {
     }
 }
 
-export default Welcome;
+export default Main;
