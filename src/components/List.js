@@ -9,7 +9,7 @@ function List(props) {
     return (
         <Container>
     {peopleArr.map((one, index) =>
-        <Row key={index}>
+        <Row className="m-3 p-2  border border-primary" key={index}>
             <Col >
                 <img src={one.picture.thumbnail} alt="..." />
             </Col>
@@ -22,7 +22,7 @@ function List(props) {
             <Col >
                 {one.dob.age}
             </Col>
-            <Col >
+            <Col className="text-center">
                 {one.nat}
             </Col>
         </Row>

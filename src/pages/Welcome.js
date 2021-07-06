@@ -3,7 +3,11 @@ import List from "../components/List";
 import API from "../utils/API";
 import React, { Component } from "react";
 import Search from "../components/Search";
-import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import { SortAlphaDown } from 'react-bootstrap-icons';
+
 
 class Welcome extends Component {
     state = {
@@ -106,29 +110,28 @@ class Welcome extends Component {
                     handleInputChange={this.handleInputChange}
                    
                 />
-                <p className="text-muted text-center"> Employee information can be sorted by clicking any of the headings</p>
-                <div className="row display" >
+                <Row className="m-3" >
 
-                    <div className="col-md-2" onClick={()=> this.sortList("gender")}>
+                    <Col onClick={()=> this.sortList("gender")}>
                         <h3> Image </h3>
-                    </div>
+                    </Col>
 
-                    <div className="col-md-2" onClick={()=> this.sortList("name", "first")}>
-                        <h3> Employee Name</h3>
-                    </div>
+                    <Col onClick={()=> this.sortList("name", "first")}>
+                        <h3> Employee Name <SortAlphaDown /></h3>
+                    </Col>
 
-                    <div className="col-md-3" onClick={()=> this.sortList("location", "city")}>
-                        <h3> Location</h3>
-                    </div>
+                    <Col onClick={()=> this.sortList("location", "city")}>
+                        <h3> Location <SortAlphaDown /></h3>
+                    </Col>
 
-                    <div className="col-md-2" onClick={()=> this.sortList("dob", "age")}>
-                        <h3>Age</h3>
-                    </div>
+                    <Col onClick={()=> this.sortList("dob", "age")}>
+                        <h3>Age <SortAlphaDown /></h3>
+                    </Col>
 
-                    <div className="col-md-2" onClick={()=> this.sortList("nat")}>
-                        <h3>Nationality</h3>
-                    </div>
-                </div>
+                    <Col onClick={()=> this.sortList("nat")}>
+                        <h3>Nationality <SortAlphaDown /></h3>
+                    </Col>
+                </Row>
                 {/* display each person */}
                 <List
                     people={this.state.people}
