@@ -14,10 +14,8 @@ function Search(props) {
             placeholder="Search for employee by name or location"
             id="search"
           />
-          <br />
-          {/* <button onClick={props.handleFormSubmit} className="btn btn-primary">
-            Search
-          </button> */}
+
+  
         </div>
       </form>
     )
