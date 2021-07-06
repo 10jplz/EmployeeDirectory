@@ -1,10 +1,9 @@
 
-import Row from "../components/Row";
+import List from "../components/List";
 import API from "../utils/API";
 import React, { Component } from "react";
 import Search from "../components/Search";
-
-console.log(API)
+import Container from 'react-bootstrap/Container'
 
 class Welcome extends Component {
     state = {
@@ -101,7 +100,7 @@ class Welcome extends Component {
     // header row of "table"
     render() {
         return (
-            <div className="container">
+            <Container>
 
                 <Search
                     handleInputChange={this.handleInputChange}
@@ -131,11 +130,11 @@ class Welcome extends Component {
                     </div>
                 </div>
                 {/* display each person */}
-                <Row
+                <List
                     people={this.state.people}
                  
                 />
-            </div>
+            </Container>
 
         )
     }
