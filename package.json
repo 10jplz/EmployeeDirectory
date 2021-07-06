@@ -1,6 +1,7 @@
 {
   "name": "employeedirectory",
   "version": "0.1.0",
+  "homepage": "https://10jplz.github.io/EmployeeDirectory/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -9,6 +10,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "bootstrap-icons": "^1.5.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-bootstrap-icons": "^1.5.0",
@@ -18,6 +20,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
