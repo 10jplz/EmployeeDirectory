@@ -6,7 +6,9 @@ import Search from "../components/Search";
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { SortAlphaDown } from 'react-bootstrap-icons';
+import { SortAlphaDown } from 'react-bootstrap-icons'
+import Header from "../components/Header";
+
 
 
 class Welcome extends Component {
@@ -105,6 +107,10 @@ class Welcome extends Component {
     render() {
         return (
             <Container>
+            <Header>
+            <Search/>
+
+            </Header>
 
                 <Search
                     handleInputChange={this.handleInputChange}
