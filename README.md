@@ -41,8 +41,7 @@
 
    ## Deployed App
    
-   www.google.com
-
+https://10jplz.github.io/EmployeeDirectory/
   ## How to Contact Developer
 
 
